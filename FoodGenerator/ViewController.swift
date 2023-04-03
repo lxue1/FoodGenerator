@@ -58,7 +58,11 @@ class ViewController: UIViewController
 
     @IBAction func RandomButton(_ sender: UIButton)
     {
-        print("random button pressed")
+        let randomPosition = Int.random(in: 0..<foodList.count)
+        let foodNamed = foodList[randomPosition]
+        
+        PreferenceTextField.text = "\(foodNamed)"
+        
     }
     
     @IBAction func OrderedButton(_ sender: UIButton)

@@ -58,7 +58,7 @@ class ViewController: UIViewController
 
     @IBAction func RandomButton(_ sender: UIButton)
     {
-        
+        print("random button pressed")
     }
     
     @IBAction func OrderedButton(_ sender: UIButton)

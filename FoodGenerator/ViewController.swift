@@ -20,7 +20,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        foodList.append(Food(culture: "American", name: "grilledCheese", mealTime: "lunch"))
+        foodList.append(Food(culture: "American", name: "grilledCheese", mealTime: "breakfast"))
         foodList.append(Food(culture: "American", name: "cheeseBurger", mealTime: "lunch"))
         foodList.append(Food(culture: "American", name: "grilledCheese", mealTime: "lunch"))
         foodList.append(Food(culture: "American", name: "benedictEggs", mealTime: "breakfast"))
@@ -67,11 +67,11 @@ class ViewController: UIViewController
     
     @IBAction func OrderedButton(_ sender: UIButton)
     {
-        FoodText.text = getRandFoodwMeal(meal: "breakfast")
+        performSegue(withIdentifier: "ShowMealPlan", sender: nil)
     }
-    func getRandFoodwMeal(meal: String) -> String
-    {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! MealPlanViewController
+       
     }
     
 }

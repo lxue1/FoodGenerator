@@ -63,7 +63,10 @@ class ViewController: UIViewController
     
     @IBAction func OrderedButton(_ sender: UIButton)
     {
-        print("Will was here")
+        FoodText.text = getRandFoodwMeal(meal: "breakfast")
+    }
+    func getRandFoodwMeal(meal: String) -> String
+    {
         
     }
     

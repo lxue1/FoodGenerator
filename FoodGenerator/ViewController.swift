@@ -19,6 +19,8 @@ class ViewController: UIViewController
     
     @IBOutlet weak var PreferenceTextField: UITextField!
     
+    @IBOutlet weak var errorMsg: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -60,6 +62,8 @@ class ViewController: UIViewController
         
         
         segueFoodList.append("Your List is Empty")
+        
+        errorMsg.text = ""
         
         displayRandFood()
     }

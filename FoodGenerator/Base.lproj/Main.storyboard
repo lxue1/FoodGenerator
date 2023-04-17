@@ -100,8 +100,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-0e-2Zr">
                                 <rect key="frame" x="94" y="314" width="204" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error: No food found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA0-Ew-3oH">
+                                <rect key="frame" x="118" y="704" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -112,6 +119,7 @@
                     <connections>
                         <outlet property="FoodText" destination="7ba-0e-2Zr" id="c49-rX-IC9"/>
                         <outlet property="PreferenceTextField" destination="DJw-rp-WgO" id="2RW-Xg-s09"/>
+                        <outlet property="errorMsg" destination="rA0-Ew-3oH" id="0Eu-dS-Xb6"/>
                         <outlet property="foodImageView" destination="Bcl-bi-JZi" id="mVP-zq-eLq"/>
                         <segue destination="k4e-Lq-LDA" kind="show" identifier="ShowMealPlan" id="2aF-1x-6XC"/>
                     </connections>

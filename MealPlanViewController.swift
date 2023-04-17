@@ -13,7 +13,7 @@ class MealPlanViewController: UITableViewController {
     var mealList: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "My Meal Plan"
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = false
 

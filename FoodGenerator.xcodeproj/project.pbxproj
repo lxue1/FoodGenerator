@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A928797D29DDED5F00B576C4 /* MealPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928797C29DDED5F00B576C4 /* MealPlanViewController.swift */; };
 		AB21FE2829CCC6F7005CFCAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21FE2729CCC6F7005CFCAE /* AppDelegate.swift */; };
 		AB21FE2A29CCC6F7005CFCAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21FE2929CCC6F7005CFCAE /* SceneDelegate.swift */; };
 		AB21FE2C29CCC6F7005CFCAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21FE2B29CCC6F7005CFCAE /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A928797C29DDED5F00B576C4 /* MealPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewController.swift; sourceTree = "<group>"; };
 		AB21FE2429CCC6F7005CFCAE /* FoodGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB21FE2729CCC6F7005CFCAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB21FE2929CCC6F7005CFCAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		AB21FE1B29CCC6F7005CFCAE = {
 			isa = PBXGroup;
 			children = (
+				A928797C29DDED5F00B576C4 /* MealPlanViewController.swift */,
 				AB21FE2629CCC6F7005CFCAE /* FoodGenerator */,
 				AB21FE2529CCC6F7005CFCAE /* Products */,
 			);
@@ -143,6 +146,7 @@
 			files = (
 				AB21FE2C29CCC6F7005CFCAE /* ViewController.swift in Sources */,
 				AB21FE3C29CCCE67005CFCAE /* Food.swift in Sources */,
+				A928797D29DDED5F00B576C4 /* MealPlanViewController.swift in Sources */,
 				AB21FE2829CCC6F7005CFCAE /* AppDelegate.swift in Sources */,
 				AB21FE2A29CCC6F7005CFCAE /* SceneDelegate.swift in Sources */,
 			);

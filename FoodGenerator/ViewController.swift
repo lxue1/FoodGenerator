@@ -11,7 +11,7 @@ class ViewController: UIViewController
 {
     
     var foodList = [Food]()
-    
+    var segueFoodList = [String]()
     
     @IBOutlet weak var foodImageView: UIImageView!
     
@@ -19,9 +19,14 @@ class ViewController: UIViewController
     
     @IBOutlet weak var PreferenceTextField: UITextField!
     
+    @IBOutlet weak var errorMsg: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
+        self.title = "Food Finder App"
+        
         foodList.append(Food(culture: "American", name: "Grilled Cheese", mealTime: "lunch"))
         foodList.append(Food(culture: "American", name: "Cheese Burger", mealTime: "lunch"))
         foodList.append(Food(culture: "American", name: "Lobster", mealTime: "lunch"))
@@ -54,24 +59,73 @@ class ViewController: UIViewController
         foodList.append(Food(culture: "European", name: "Caprese Salad", mealTime: "lunch"))
         foodList.append(Food(culture: "European", name: "Beef Stroganoff", mealTime: "dinner"))
         foodList.append(Food(culture: "European", name: "Croissant", mealTime: "breakfast"))
-
+        
+        
+        segueFoodList.append("Your List is Empty")
+        
+        errorMsg.text = ""
+        
+        displayRandFood()
     }
 
 
     @IBAction func RandomButton(_ sender: UIButton)
     {
+        displayRandFood()
+    }
+    func displayRandFood()
+    {
         let randomPosition = Int.random(in: 0..<foodList.count)
         let foodNamed = foodList[randomPosition].name
         
-        PreferenceTextField.text = "\(foodNamed)"
+        FoodText.text = "\(foodNamed)"
         foodImageView.image = UIImage(named: "\(foodNamed)")
-        
+    }
+    
+    
+    @IBAction func showPlanButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "ShowMealPlan", sender: nil)
     }
     
     @IBAction func OrderedButton(_ sender: UIButton)
     {
-        print("Will was here")
+        segueFoodList.removeAll()
+        for _ in 0..<30
+        {
+            segueFoodList.append(getRandMealwTime(mealTime: "breakfast"))
+            segueFoodList.append(getRandMealwTime(mealTime: "lunch"))
+            segueFoodList.append(getRandMealwTime(mealTime: "dinner"))
+        }
+        performSegue(withIdentifier: "ShowMealPlan", sender: nil)
+    }
+    
+    @IBAction func searchButton(_ sender: Any) {
         
+    }
+    
+     func getRandMealwTime(mealTime:String) -> String{
+        if (mealTime != "breakfast" && mealTime != "lunch" && mealTime != "dinner")
+        {
+            return "Input Error"
+        }
+        var i = Int.random(in: 0..<foodList.count)
+         for _ in 0...foodList.count
+        {
+            if(foodList[i].mealTime == mealTime)
+            {
+                return foodList[i].name
+            }
+            else
+            {
+                i += 1
+                i %= foodList.count
+            }
+        }
+        return "no food found"
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! MealPlanViewController
+        nvc.foodList = segueFoodList
     }
     
 }
